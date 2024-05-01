@@ -1,0 +1,116 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Grey background color */
+    color: #333;
+    line-height: 1.6;
+}
+/* Container styles */
+.container {
+    display: flex;
+    height: 100vh;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    background-color: #e0e0e0; /* Light grey background color */
+}
+/* Navbar styles */
+.navbar {
+    width: 250px;
+    background-color: #343a40; /* Dark grey background color */
+    padding: 20px 0;
+    border-radius: 10px 0 0 10px; /* Rounded corners */
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    animation: slideInLeft 0.5s ease-in-out;
+}
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navbar li {
+    margin-bottom: 10px;
+}
+.navbar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    border-radius: 5px; /* Rounded corners */
+    animation: fadeIn 0.5s ease-in-out;
+}
+.navbar a:hover {
+    background-color: #495057;
+    transform: scale(1.1);
+}
+/* Main content styles */
+.main {
+    flex-grow: 1;
+    padding: 20px;
+    border-radius: 0 10px 10px 0; /* Rounded corners */
+    animation: slideInRight 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+.main > * {
+    margin-bottom: 20px;
+}
+/* Header styles */
+header {
+    background-color: #007bff; /* Blue header background color */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    animation: fadeIn 0.5s ease-in-out;
+    min-height: 150px; /* Increased height */
+}
+/* Main section */
+main {
+    flex-grow: 1; /* Takes remaining space */
+    background-color: #ffffff; /* White background for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+}
+/* Footer styles */
+footer {
+    background-color: #343a40; /* Dark grey footer background color */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    min-height: 100px; /* Increased height */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
